@@ -501,13 +501,13 @@ function update_trojan(){
    
 }
 
-install_acme(){
+function install_acme(){
     file_path="~/.acme.sh/acme.sh/"
-    if [ -f "$file" ]
+    if [ -f "$file_path" ]
     then
-        red "$file 已存在"
+        red "$file_path 已存在"
     else
-        blue "$file 不存在，现在安装"
+        blue "$file_path 不存在，现在安装"
         curl https://get.acme.sh | sh
     fi
 }

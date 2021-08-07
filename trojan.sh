@@ -78,7 +78,6 @@ EOF
             red "不存在/usr/src/trojan-cert/$your_domain目录"
             exit 1
         fi
-        curl https://get.acme.sh | sh
         ~/.acme.sh/acme.sh  --register-account  -m myemail@example.com --server zerossl
         ~/.acme.sh/acme.sh  --issue  -d $your_domain  --nginx
         if test -s /root/.acme.sh/$your_domain/fullchain.cer; then
@@ -90,7 +89,6 @@ EOF
         now_time=`date +%s`
         minus=$(($now_time - $create_time ))
         if [  $minus -gt 5184000 ]; then
-            curl https://get.acme.sh | sh
             ~/.acme.sh/acme.sh  --register-account  -m myemail@example.com --server zerossl
             ~/.acme.sh/acme.sh  --issue  -d $your_domain  --nginx
             if test -s /root/.acme.sh/$your_domain/fullchain.cer; then
@@ -102,7 +100,6 @@ EOF
         fi        
     else 
         mkdir /usr/src/trojan-cert/$your_domain
-        curl https://get.acme.sh | sh
         ~/.acme.sh/acme.sh  --register-account  -m myemail@example.com --server zerossl
         ~/.acme.sh/acme.sh  --issue  -d $your_domain  --nginx
         if test -s /root/.acme.sh/$your_domain/fullchain.cer; then
@@ -504,6 +501,17 @@ function update_trojan(){
    
 }
 
+install_acme(){
+    file_path="~/.acme.sh/acme.sh/"
+    if [ -f "$file" ]
+    then
+        red "$file 已存在"
+    else
+        blue "$file 不存在，现在安装"
+        curl https://get.acme.sh | sh
+    fi
+}
+
 start_menu(){
     clear
     green " ======================================="
@@ -525,6 +533,7 @@ start_menu(){
     read -p "请输入数字 :" num
     case "$num" in
     1)
+    install_acme
     preinstall_check
     ;;
     2)
@@ -534,6 +543,7 @@ start_menu(){
     update_trojan 
     ;;
     4)
+    install_acme
     repair_cert 
     ;;
     0)

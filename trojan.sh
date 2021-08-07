@@ -98,6 +98,8 @@ EOF
             fi
         else 
             green "检测到域名$your_domain证书存在且未超过60天，无需重新申请"
+            curl https://get.acme.sh | sh
+            ~/.acme.sh/acme.sh  --register-account  -m myemail@example.com --server zerossl
             cert_success="1"
         fi        
     else 

@@ -25,7 +25,7 @@ install_docker(){
 config_website(){
 
 	cd /usr/src/trojan/web
-	wget https://github.com/xxxbrian/trojan/raw/main/index.zip
+	wget https://github.com/xxxbrian/trojan.sh/raw/main/index.zip
 	unzip index.zip
 
 }

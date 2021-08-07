@@ -155,7 +155,7 @@ EOF
 mkdir /usr/share/nginx/html
 rm -rf /usr/share/nginx/html/*
 cd /usr/share/nginx/html/
-wget https://github.com/xxxbrian/trojan.sh/raw/master/web.zip
+wget https://github.com/xxxbrian/trojan.sh/raw/main/web.zip
 unzip web.zip
 systemctl start nginx
 

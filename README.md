@@ -74,7 +74,7 @@ Trojan可以将科学上网流量，伪装为HTTPS网页浏览。相比Shadowsoc
 **Trojan一键安装脚本：**
 
 ```sh
-curl -O https://raw.githubusercontent.com/xxxbrian/trojan.sh/master/trojan.sh && chmod +x trojan.sh && ./trojan.sh
+curl -O https://raw.githubusercontent.com/xxxbrian/trojan.sh/main/trojan.sh && chmod +x trojan.sh && ./trojan.sh
 ```
 
 如果以上命令运行时出现关于curl的错误提示，那么需要先为服务器安装curl后，再运行以上命令。如果没有错误提示，则忽略本段内容。

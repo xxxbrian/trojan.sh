@@ -166,7 +166,7 @@ sed -i "s/password1/$mypassword/" /etc/nginx/ssl/config.json
 
 rm -f /usr/share/nginx/html/*
 cd /usr/share/nginx/html
-wget https://github.com/xxxbrian/trojan.sh/raw/master/web.zip
+wget https://github.com/xxxbrian/trojan.sh/raw/main/web.zip
 unzip web.zip
 systemctl restart nginx.service
 systemctl enable nginx.service

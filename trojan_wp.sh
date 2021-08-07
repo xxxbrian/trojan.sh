@@ -46,7 +46,7 @@ function install_wordpress(){
     wget https://cn.wordpress.org/latest-zh_CN.zip
     if [ ! -f "/usr/share/wordpresstemp/latest-zh_CN.zip" ]; then
         red "从cn官网下载wordpress失败，尝试从github下载……"
-        wget https://github.com/xxxbrian/wordpress/raw/master/latest-zh_CN.zip    
+        wget https://github.com/atrandys/wordpress/raw/master/latest-zh_CN.zip    
     fi
     if [ ! -f "/usr/share/wordpresstemp/latest-zh_CN.zip" ]; then
         red "我它喵的从github下载wordpress也失败了，请尝试手动安装……"
@@ -147,7 +147,7 @@ EOT
     unzip latest-zh_CN.zip >/dev/null 2>&1
     mv wordpress/* ./
     #cp wp-config-sample.php wp-config.php
-    wget https://raw.githubusercontent.com/xxxbrian/trojan/master/wp-config.php
+    wget https://raw.githubusercontent.com/xxxbrian/trojan/main/wp-config.php
     green "===================="
     green "  7.配置wordpress"
     green "===================="
@@ -212,7 +212,7 @@ EOF
     sleep 3
     #rm -rf /usr/share/nginx/html/*
     #cd /usr/share/nginx/html/
-    #wget https://github.com/xxxbrian/trojan/raw/master/fakesite.zip >/dev/null 2>&1
+    #wget https://github.com/xxxbrian/trojan/raw/main/fakesite.zip >/dev/null 2>&1
     #unzip fakesite.zip >/dev/null 2>&1
     #sleep 5
     curl https://get.acme.sh | sh
@@ -316,7 +316,7 @@ EOF
         rm -f trojan-${latest_version}-linux-amd64.tar.xz
         #下载trojan客户端
         #green "开始下载并处理trojan windows客户端"
-        #wget https://github.com/xxxbrian/trojan/raw/master/trojan-cli.zip
+        #wget https://github.com/xxxbrian/trojan/raw/main/trojan-cli.zip
         #wget -P /usr/src/trojan-temp https://github.com/trojan-gfw/trojan/releases/download/v${latest_version}/trojan-${latest_version}-win.zip
         #unzip trojan-cli.zip >/dev/null 2>&1
         #unzip /usr/src/trojan-temp/trojan-${latest_version}-win.zip -d /usr/src/trojan-temp/ >/dev/null 2>&1

@@ -6,6 +6,8 @@ Trojan可以将科学上网流量，伪装为HTTPS网页浏览。相比Shadowsoc
 
 官方页面：[https://trojan-gfw.github.io/trojan/](https://trojan-gfw.github.io/trojan/)
 
+![logo](/trojan.sh.png)
+
 **Trojan科学上网的实现原理：**
 
 用户分别在服务器和本地设备搭建好Trojan后，Trojan和伪装网站，共同使用443端口。

@@ -218,7 +218,7 @@ EOF
         ],
         "reuse_session": true,
         "session_ticket": false,
-        "session_timeout": 600,
+        "session_timeout": 0,
         "plain_http_response": "",
         "curves": "",
         "dhparam": ""
